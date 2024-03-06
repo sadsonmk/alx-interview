@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 def pascal_triangle(n):
     """Returns a matrix (list of lists) of integers representing
       the Pascal’s triangle of size n

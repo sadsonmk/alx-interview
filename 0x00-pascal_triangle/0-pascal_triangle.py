@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+#!/usr/bin/python3
 def pascal_triangle(n):
     """Returns a matrix (list of lists) of integers representing
       the Pascal’s triangle of size n
@@ -12,11 +12,18 @@ def pascal_triangle(n):
     """
     if n <= 0:
         return []
-    matrix = [[1]]
-    for i in range(1, n):
-        row = [1]
-        for j in range(1, i):
-            row.append(matrix[i - 1][j - 1] + matrix[i - 1][j])
-        row.append(1)
-        matrix.append(row)
+
+    matrix = [[] for i in range(n)]
+
+    # use for loops to loop through the matrix
+    for row in range(n):
+        # the column is terminating at row + 1
+        for col in range(row + 1):
+
+            if col == 0 or row == col:
+                matrix[row][col] = 1
+            # property 4
+            else:
+                matrix[row][col] = \
+                    matrix[row - 1][col] + matrix[row - 1][col - 1]
     return matrix

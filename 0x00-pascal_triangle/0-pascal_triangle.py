@@ -13,7 +13,7 @@ def pascal_triangle(n):
     if n <= 0:
         return []
 
-    matrix = [[] for i in range(n)]
+    matrix = [[0 for _ in range(n)] for _ in range(n)]
 
     # use for loops to loop through the matrix
     for row in range(n):

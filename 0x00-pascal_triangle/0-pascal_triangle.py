@@ -1,4 +1,6 @@
 #!/usr/bin/python3
+"""this is a module for pascal_triangle which returns a matrix of integers"""
+
 def pascal_triangle(n):
     """Returns a matrix (list of lists) of integers representing
       the Pascal’s triangle of size n
